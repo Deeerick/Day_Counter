@@ -1,4 +1,4 @@
-print('=' * 10 + '\033[91m Inicializando o Contador de Dias \033[0m' + '=' * 10)
+print('=' * 10 + '\033[0;31m Inicializando o Contador de Dias \033[0m' + '=' * 10)
 
 from datetime import datetime
 from alive_progress import alive_bar
@@ -17,7 +17,7 @@ def contar_dias(data_informada):
     return diferenca.days
 
 # Obter a data do usuário
-data_informada = input("\033[91m > Informe a data (no formato DD-MM-YYYY):  \033[0m")
+data_informada = input("\033[0;31m > Informe a data (no formato DD-MM-YYYY):  \033[0m")
 
 # Chamar a função e imprimir o resultado
 with alive_bar(100) as bar:
@@ -26,4 +26,4 @@ with alive_bar(100) as bar:
         bar()
 
 dias = contar_dias(data_informada)
-print("\033[91m > Fazem ", dias, "dias que nos conhecemos! ❤ \033[0m")
+print("\033[0;31m > Fazem ", dias, "dias que nos conhecemos! ❤ \033[0m")
